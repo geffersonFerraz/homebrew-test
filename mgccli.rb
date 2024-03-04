@@ -5,20 +5,20 @@
 class Mgccli < Formula
   desc ""
   homepage "https://github.com/geffersonFerraz/test-goreleaser"
-  version "0.0.11"
+  version "0.0.12"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/geffersonFerraz/test-goreleaser/releases/download/v0.0.11/mgccli_0.0.11_darwin_arm64.tar.gz"
-      sha256 "c877c6823ad6fd99d3c2b92e2f06ab7990c03f8c6cb795254d9d58a447c31d80"
+    if Hardware::CPU.intel?
+      url "https://github.com/geffersonFerraz/test-goreleaser/releases/download/v0.0.12/mgccli_0.0.12_darwin_amd64.tar.gz"
+      sha256 "cdb448c0155b51934546d00fb9cc9c691fcc64420f01d112d0358d1071ea5ef2"
 
       def install
         bin.install "mgccli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/geffersonFerraz/test-goreleaser/releases/download/v0.0.11/mgccli_0.0.11_darwin_amd64.tar.gz"
-      sha256 "e263d252e4a185d6518c6b4e5ec11c863e9a578bb82b5b4c2d8b8a146d709595"
+    if Hardware::CPU.arm?
+      url "https://github.com/geffersonFerraz/test-goreleaser/releases/download/v0.0.12/mgccli_0.0.12_darwin_arm64.tar.gz"
+      sha256 "73850f22f3e659a96ade4f8136a98b5db54a095cceda574acb2a54f8110c0943"
 
       def install
         bin.install "mgccli"
@@ -27,17 +27,17 @@ class Mgccli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/geffersonFerraz/test-goreleaser/releases/download/v0.0.11/mgccli_0.0.11_linux_arm64.tar.gz"
-      sha256 "d1e7640b17412bb25792e7e4d10b1d8ea7c477cbd2b66a05955717b77b06f38b"
+    if Hardware::CPU.intel?
+      url "https://github.com/geffersonFerraz/test-goreleaser/releases/download/v0.0.12/mgccli_0.0.12_linux_amd64.tar.gz"
+      sha256 "40794443551630e8219e7a62fcfc8e4d495bdae870992cfd9e0cf7406053c34a"
 
       def install
         bin.install "mgccli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/geffersonFerraz/test-goreleaser/releases/download/v0.0.11/mgccli_0.0.11_linux_amd64.tar.gz"
-      sha256 "215564eac65c785ed3cc15ca4ba38242804b2798c572d1d3711b9b05cfe572d1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/geffersonFerraz/test-goreleaser/releases/download/v0.0.12/mgccli_0.0.12_linux_arm64.tar.gz"
+      sha256 "96d99c5d89d42ab2cd462c6b823006839548bc8e3ca27a6c378d5a48376ec83a"
 
       def install
         bin.install "mgccli"
