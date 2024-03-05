@@ -9,7 +9,7 @@ class Mgccli < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/geffersonFerraz/test-goreleaser/releases/download/v0.0.12/mgccli_0.0.12_darwin_amd64.tar.gz"
+      url "https://test.geff.ws/download/cli/0.0.12/darwin_amd64.tar.gz"
       sha256 "cdb448c0155b51934546d00fb9cc9c691fcc64420f01d112d0358d1071ea5ef2"
 
       def install
@@ -17,7 +17,7 @@ class Mgccli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/geffersonFerraz/test-goreleaser/releases/download/v0.0.12/mgccli_0.0.12_darwin_arm64.tar.gz"
+      url "https://test.geff.ws/download/cli/0.0.12/darwin_arm64.tar.gz"
       sha256 "73850f22f3e659a96ade4f8136a98b5db54a095cceda574acb2a54f8110c0943"
 
       def install
@@ -28,7 +28,7 @@ class Mgccli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/geffersonFerraz/test-goreleaser/releases/download/v0.0.12/mgccli_0.0.12_linux_amd64.tar.gz"
+      url "https://test.geff.ws/download/cli/0.0.12/linux_amd64.tar.gz"
       sha256 "40794443551630e8219e7a62fcfc8e4d495bdae870992cfd9e0cf7406053c34a"
 
       def install
@@ -36,7 +36,7 @@ class Mgccli < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/geffersonFerraz/test-goreleaser/releases/download/v0.0.12/mgccli_0.0.12_linux_arm64.tar.gz"
+      url "https://test.geff.ws/download/cli/0.0.12/linux_arm64.tar.gz"
       sha256 "96d99c5d89d42ab2cd462c6b823006839548bc8e3ca27a6c378d5a48376ec83a"
 
       def install
